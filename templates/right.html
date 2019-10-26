@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!-- /post-right -->
+
+    <section class="widget post-right-item"><h4 class="post-right-title">热门推荐</h4>
+{#        <ul class="post-new">#}
+{#            {% for k in remen %}#}
+{#                <li>#}
+{#                    <div class="img"><a href="{% url 'blog:index' %}show-{{ k.id }}.html" title="{{ k.title }}"> <img#}
+{#                            src="{% url 'blog:index' %}media/{{ k.img }}" srcset="{% url 'blog:index' %}media/{{ k.img }}"#}
+{#                            alt="{{ k.title }}" class="wp-post-image" width="120" height="80"/> </a></div>#}
+{#                    <div class="text"><a href="{% url 'blog:index' %}show-{{ k.id }}.html" title="{{ k.title }}"#}
+{#                                         target="_blank">{{ k.title }}</a></div>#}
+{#                </li> {% endfor %}#}
+{#        </ul>#}
+        <div class="videobox" ontouchmove="return false;">
+    <video width="100%" height="100%" autoplay src="../media/video/龙族电影宣传.mp4" ></video>
+</div>
+    </section>
+
+    <section class="widget post-right-item"><h4 class="post-right-title">所有标签</h4>
+        <div class="tags">
+            {% for tag in tags %}
+            <a href="{% url 'blog:index' %}tag/{{ tag.name }}">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="post-right-item">
+        <h4 class="post-right-title">关注我</h4>
+        <div class="wid-about">
+            <p>欢迎关注！</p>
+            <img src="{% static 'picture/weixinqr.jpg' %}" alt="微信二维码" width="160" height="160">
+        </div>
+        <div class="wid-about">
+            <p><strong>联系方式:</strong></p>
+            <p>600-800-90010</p>
+            <p>Email：herfanor@163.com</p>
+        </div>
+    </div>

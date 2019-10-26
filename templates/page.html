@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="main-container" class="container clearfix">
+        <section class="post-left">
+            <div class="breadcrumb">您的位置： <a itemprop="breadcrumb" href="{% url 'blog:index' %}">首页</a> » <span class="current">关于我们</span>
+            </div>
+            <div class="post-main clearfix">
+                <h1 class="post-title">关于站长</h1>
+                <div class="post-con clearfix">
+                    <div class="article-meta"> <span class="item">2018-10-09</span></div>
+                    <article class="article-content">
+                        <p>你想看啥书？小老弟？</p>
+                    </article>
+                </div>
+            </div>
+            <!-- /文章 -->
+        </section>
+        <!-- /post-left -->
+        <!-- /post-right -->
+        <aside class="post-right hidden-xs">
+            <!-- /关注我们 -->
+
+            <div class="post-right-item">
+                <h4 class="post-right-title">关注我</h4>
+                <div class="wid-about">
+                    <p>欢迎关注！</p>
+                    <img src="{% url 'blog:index' %}static/picture/weixinqr.jpg" alt="微信二维码" width="160" height="160">
+                </div>
+                <div class="wid-about">
+                    <p><strong>联系方式:</strong></p>
+                    <p>有事扫码</p>
+                    <p>打钱解决</p>
+                </div>
+            </div>
+
+
+        </aside>
+    </div>
+{% endblock %}
